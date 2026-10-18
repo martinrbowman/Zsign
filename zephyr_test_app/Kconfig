@@ -1,0 +1,12 @@
+mainmenu "Zsign blinky (MCUboot demo app) configuration"
+
+config APP_BLINK_PERIOD_MS
+	int "LED blink half-period in milliseconds"
+	default 1000
+	help
+	  Time the LED stays on (and off) per toggle. Overridden per-build
+	  by the DFU demo script (-DCONFIG_APP_BLINK_PERIOD_MS=<ms>) rather
+	  than edited here, so a "new version" is a build-time parameter,
+	  not a source change.
+
+source "Kconfig.zephyr"

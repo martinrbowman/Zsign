@@ -1,0 +1,60 @@
+cmake:
+  application:
+    configuration-dir: '/Volumes/embedded/Zsign/zephyr_test_app'
+    source-dir: '/Volumes/embedded/Zsign/zephyr_test_app'
+  board:
+    name: 'frdm_mcxa156'
+    path:
+     - '/Volumes/embedded/zephyr_install/external/zephyr/boards/nxp/frdm_mcxa156'
+    qualifiers: 'mcxa156'
+    revision: ''
+  devicetree:
+    bindings-dirs:
+     - '/Volumes/embedded/zephyr_install/external/zephyr/dts/bindings'
+    files:
+     - '/Volumes/embedded/zephyr_install/external/zephyr/boards/nxp/frdm_mcxa156/frdm_mcxa156.dts'
+    include-dirs:
+     - '/Volumes/embedded/zephyr_install/external/modules/hal/ambiq/dts'
+     - '/Volumes/embedded/zephyr_install/external/modules/hal/atmel/include'
+     - '/Volumes/embedded/zephyr_install/external/modules/hal/bouffalolab/include'
+     - '/Volumes/embedded/zephyr_install/external/modules/hal/bouffalolab/include/zephyr'
+     - '/Volumes/embedded/zephyr_install/external/modules/hal/gigadevice/include'
+     - '/Volumes/embedded/zephyr_install/external/modules/hal/microchip/include'
+     - '/Volumes/embedded/zephyr_install/external/modules/hal/microchip/dts'
+     - '/Volumes/embedded/zephyr_install/external/modules/hal/nuvoton/dts'
+     - '/Volumes/embedded/zephyr_install/external/modules/hal/nxp/dts'
+     - '/Volumes/embedded/zephyr_install/external/modules/hal/stm32/dts'
+     - '/Volumes/embedded/zephyr_install/external/modules/hal/ti/dts'
+     - '/Volumes/embedded/zephyr_install/external/zephyr/boards/nxp/frdm_mcxa156/dts'
+     - '/Volumes/embedded/zephyr_install/external/zephyr/include'
+     - '/Volumes/embedded/zephyr_install/external/zephyr/include/zephyr'
+     - '/Volumes/embedded/zephyr_install/external/zephyr/dts/common'
+     - '/Volumes/embedded/zephyr_install/external/zephyr/dts/vendor'
+     - '/Volumes/embedded/zephyr_install/external/zephyr/dts/rx'
+     - '/Volumes/embedded/zephyr_install/external/zephyr/dts/x86'
+     - '/Volumes/embedded/zephyr_install/external/zephyr/dts/xtensa'
+     - '/Volumes/embedded/zephyr_install/external/zephyr/dts/sparc'
+     - '/Volumes/embedded/zephyr_install/external/zephyr/dts/riscv'
+     - '/Volumes/embedded/zephyr_install/external/zephyr/dts/posix'
+     - '/Volumes/embedded/zephyr_install/external/zephyr/dts/arm64'
+     - '/Volumes/embedded/zephyr_install/external/zephyr/dts/arm'
+     - '/Volumes/embedded/zephyr_install/external/zephyr/dts/arc'
+     - '/Volumes/embedded/zephyr_install/external/zephyr/dts'
+  kconfig:
+    files:
+     - '/Volumes/embedded/zephyr_install/external/zephyr/boards/nxp/frdm_mcxa156/frdm_mcxa156_defconfig'
+     - '/Volumes/embedded/Zsign/zephyr_test_app/prj.conf'
+     - '/Volumes/embedded/Zsign/zephyr_test_app/build/zephyr/misc/generated/extra_kconfig_options.conf'
+    user-files:
+     - '/Volumes/embedded/Zsign/zephyr_test_app/prj.conf'
+  toolchain:
+    name: 'zephyr'
+    path: '/Users/martinbowman/.zephyr_ide/toolchains/zephyr-sdk-1.0.1'
+  zephyr:
+    version: '4.4.0'
+    zephyr-base: '/Volumes/embedded/zephyr_install/external/zephyr'
+version: '0.1.0'
+west:
+  command: '/Volumes/embedded/zephyr_install/.venv/bin/west build -b frdm_mcxa156 -d /Volumes/embedded/Zsign/zephyr_test_app/build /Volumes/embedded/Zsign/zephyr_test_app --pristine -- -DCONFIG_APP_BLINK_PERIOD_MS=750'
+  topdir: '/Volumes/embedded/zephyr_install'
+  version: '1.5.0'

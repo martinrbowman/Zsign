@@ -1,0 +1,35 @@
+# Available runners configured by board.cmake.
+runners:
+- linkserver
+- jlink
+- pyocd
+
+# Default flash runner if --runner is not given.
+flash-runner: linkserver
+
+# Default debug runner if --runner is not given.
+debug-runner: linkserver
+
+# Common runner configuration values.
+config:
+  board_dir: /Volumes/embedded/zephyr_install/external/zephyr/boards/nxp/frdm_mcxa156
+  # Build outputs:
+  elf_file: zephyr.elf
+  bin_file: zephyr.bin
+  # Host tools:
+  gdb: /Users/martinbowman/.zephyr_ide/toolchains/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/arm-zephyr-eabi-gdb
+  openocd: /Users/martinbowman/.zephyr_ide/toolchains/zephyr-sdk-1.0.1/hosttools/usr/bin/openocd
+  openocd_search:
+    - /Users/martinbowman/.zephyr_ide/toolchains/zephyr-sdk-1.0.1/hosttools/opt/openocd/share/openocd/scripts
+
+# Runner specific arguments
+args:
+  linkserver:
+    - --dt-flash=y
+    - --device=MCXA156:FRDM-MCXA156
+  jlink:
+    - --dt-flash=y
+    - --device=MCXA156
+  pyocd:
+    - --dt-flash=y
+    - --target=mcxA156

@@ -1,0 +1,6 @@
+west:
+  command: /Volumes/embedded/zephyr_install/.venv/bin/west build -b frdm_mcxa156 -d
+    /Volumes/embedded/Zsign/zephyr_test_app/mcuboot_build external/bootloader/mcuboot/boot/zephyr
+    --pristine -- -DEXTRA_CONF_FILE=/Volumes/embedded/Zsign/zephyr_test_app/keys/mcuboot-public-key.conf
+  topdir: /Volumes/embedded/zephyr_install
+  version: 1.5.0

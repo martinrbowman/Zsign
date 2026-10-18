@@ -1,0 +1,16 @@
+Metadata-Version: 2.4
+Name: zsign
+Version: 0.0.1
+Summary: Secure firmware signing service for Zephyr/MCUboot
+Requires-Python: >=3.10
+Requires-Dist: cryptography==50.0.2
+Requires-Dist: argon2-cffi==25.1.0
+Requires-Dist: keyring==25.7.0
+Requires-Dist: imgtool==2.4.0
+Requires-Dist: PySide6==6.12.0
+Requires-Dist: fastapi==0.143.3
+Requires-Dist: uvicorn==0.54.0
+Requires-Dist: python-multipart==0.0.32
+Provides-Extra: dev
+Requires-Dist: pytest==9.1.1; extra == "dev"
+Requires-Dist: httpx==0.28.1; extra == "dev"

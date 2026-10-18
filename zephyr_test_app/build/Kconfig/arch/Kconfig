@@ -1,0 +1,12 @@
+# Load Zephyr Arch Kconfig descriptions.
+osource "/Volumes/embedded/zephyr_install/external/zephyr/arch/rx/Kconfig"
+osource "/Volumes/embedded/zephyr_install/external/zephyr/arch/x86/Kconfig"
+osource "/Volumes/embedded/zephyr_install/external/zephyr/arch/xtensa/Kconfig"
+osource "/Volumes/embedded/zephyr_install/external/zephyr/arch/sparc/Kconfig"
+osource "/Volumes/embedded/zephyr_install/external/zephyr/arch/riscv/Kconfig"
+osource "/Volumes/embedded/zephyr_install/external/zephyr/arch/posix/Kconfig"
+osource "/Volumes/embedded/zephyr_install/external/zephyr/arch/openrisc/Kconfig"
+osource "/Volumes/embedded/zephyr_install/external/zephyr/arch/mips/Kconfig"
+osource "/Volumes/embedded/zephyr_install/external/zephyr/arch/arm64/Kconfig"
+osource "/Volumes/embedded/zephyr_install/external/zephyr/arch/arm/Kconfig"
+osource "/Volumes/embedded/zephyr_install/external/zephyr/arch/arc/Kconfig"

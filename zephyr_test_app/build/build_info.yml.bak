@@ -1,0 +1,6 @@
+west:
+  command: /Volumes/embedded/zephyr_install/.venv/bin/west build -b frdm_mcxa156 -d
+    /Volumes/embedded/Zsign/zephyr_test_app/build /Volumes/embedded/Zsign/zephyr_test_app
+    --pristine -- -DCONFIG_APP_BLINK_PERIOD_MS=750
+  topdir: /Volumes/embedded/zephyr_install
+  version: 1.5.0

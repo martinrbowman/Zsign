@@ -1,0 +1,1 @@
+"mcuboot":"/Volumes/embedded/zephyr_install/external/bootloader/mcuboot":"/Volumes/embedded/zephyr_install/external/bootloader/mcuboot/boot/zephyr/sysbuild"

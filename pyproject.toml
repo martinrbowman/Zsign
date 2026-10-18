@@ -1,0 +1,39 @@
+[project]
+name = "zsign"
+version = "0.0.1"
+description = "Secure firmware signing service for Zephyr/MCUboot"
+requires-python = ">=3.10"
+# All runtime dependencies are exact-pinned: a floor-pinned range can
+# silently pull in a new major version with different behavior on a
+# clean install. To repin after a deliberate upgrade: install the new
+# version, run the full test suite, then update the == pins below to
+# match `pip list --format=freeze`.
+dependencies = [
+    "cryptography==50.0.2",
+    "argon2-cffi==25.1.0",
+    "keyring==25.7.0",
+    # Pinned to match a specific MCUboot tree's scripts/imgtool in
+    # production; repin to the exact version your target bootloader
+    # build uses, per spec.md's "pinned imgtool" requirement.
+    "imgtool==2.4.0",
+    "PySide6==6.12.0",
+    "fastapi==0.143.3",
+    "uvicorn==0.54.0",
+    "python-multipart==0.0.32",
+]
+
+[project.scripts]
+zsign-gui = "zsign.gui.app:main"
+
+[project.optional-dependencies]
+dev = ["pytest==9.1.1", "httpx==0.28.1"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

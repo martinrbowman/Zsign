@@ -1,0 +1,2 @@
+# Load Sysbuild board Kconfig descriptions.
+osource "/Volumes/embedded/zephyr_install/external/zephyr/boards/nxp/frdm_mcxa156/Kconfig.sysbuild"
